@@ -1,6 +1,12 @@
 export const ABI = [
   {
-    "inputs": [],
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_addressA",
+        "type": "address"
+      }
+    ],
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
@@ -325,19 +331,6 @@ export const ABI = [
   {
     "inputs": [],
     "name": "resetTable",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_addressA",
-        "type": "address"
-      }
-    ],
-    "name": "setContract",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

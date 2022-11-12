@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ABI } from './ContractABI';
 import { CONTRACT_ADDRESS} from "./ContractAddress";
 import { ethers } from "ethers";
 
-function WARandom3() {
+function WARandom4() {
+    let[randomNum, setRandomNum] = useState("");
     //connect to contract block
     let contract;
     let signer;
@@ -16,17 +17,19 @@ function WARandom3() {
         signer = provider.getSigner();
         contract = new ethers.Contract(Address, ABI, signer);
     }
-    const createNumber = async () => {
+    const getNum = async () => {
         await connectContract();
-        await contract.createRandomNumber();
+        let num = await contract.randomNumber();
+        setRandomNum(`Random Number is: ${num}` );
     }
 
     return (
         <div>
             <button className='button-56' style={{backgroundColor: "lightGreen"}}
-            onClick={createNumber}>3- Create Random Number</button>
+            onClick={getNum}>4- See Random Number</button>
+            <p>{randomNum}</p>
         </div>
     )
 }
 
-export default WARandom3;
+export default WARandom4;

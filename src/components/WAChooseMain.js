@@ -1,12 +1,9 @@
-import React from 'react'
-import { useState } from 'react'
+import React from 'react';
 import { ethers } from "ethers";
 import { ABI } from "./ContractABI";
 import { CONTRACT_ADDRESS } from "./ContractAddress";
-import { useNavigate } from 'react-router-dom';
  
 function WAChooseMain() {
-    const navigate = useNavigate();
 
     let contract;
     let signer;
@@ -21,26 +18,22 @@ function WAChooseMain() {
         contract = new ethers.Contract(Address, ABI, signer);
     }
 
-    let [inputValue, setInputValue] = useState("");
-    let [message, setMessage] = useState("Choose Main Proposal by Index Number (Only Owner can choose)")
     const chooseMain = async () => {
-        connectContract();
-        const txArray = await contract.getAllPro();
-        if(inputValue === ""  || inputValue >= txArray.length ) {
-            alert( `Input number must be between: 0 <= number <${txArray.length}`);
+        await connectContract();
+        let txArray = await contract.getAllPro();
+        let randomN1 = await contract.randomNumber();
+        let randomN2 = await randomN1.toString();
+        let randomN3 = parseInt(randomN2, 10);
+        if(randomN3 >= txArray.length ) {
+            alert( `Random Number is out of range. Create another random Number again`);
         }  else {
-            await contract.chooseMainProposal(inputValue);
-            setMessage("Success, main proposal choosen. You can now see it by clicking on See Main Proposal Button")
+            await contract.chooseMainProposal();
+            alert("Success, main proposal choosen. You can now see it by clicking on See Main Proposal Button")
         }
     }
     return (
         <div>
-            <button className='button-56' onClick={chooseMain}>Choose Proposal (Only Owner)</button>
-            <p>{message}</p>
-            <input type="number" value={inputValue} onChange={ e => setInputValue(e.target.value) } required />
-            <br />
-            <br />
-            <button className='button-56' onClick={ ()=> navigate("/")}>Homepage</button>
+            <button className='button-56' style={{backgroundColor: "#dc143c"}} onClick={chooseMain}>Choose Proposal (Only Owner)</button>
         </div>
     )
 }

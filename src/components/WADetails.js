@@ -6,6 +6,8 @@ import WAWithdrawBalance from './WAWithdrawBalance';
 import WARandom1 from './WARandom1';
 import WARandom2 from './WARandom2';
 import WARandom3 from './WARandom3';
+import WARandom4 from './WARandom4';
+import WAChooseMain from "./WAChooseMain";
 
  
 function WADetails() {
@@ -21,7 +23,7 @@ function WADetails() {
             <br />
             <button className='button-56' onClick={ () => navigate("/submit") }>Submit Proposal</button>
             <br />
-            <button className='button-56 redButton' onClick={ () => navigate("/choose") }>Choose Proposal (Only Owner)</button>
+            <WAChooseMain />
             <br />
             <button className='button-56 redButton' onClick={ () => navigate("/close") }>Close Voting (Only Owner)</button>
             <br />
@@ -36,6 +38,8 @@ function WADetails() {
             <WARandom2 />
             <br />
             <WARandom3 />
+            <br />
+            <WARandom4 />
         </div>
     )
 }
