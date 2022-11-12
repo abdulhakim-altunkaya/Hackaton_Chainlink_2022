@@ -1,8 +1,12 @@
 export const ABI = [
-  { 
+  {
     "inputs": [],
     "stateMutability": "nonpayable",
     "type": "constructor"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "fallback"
   },
   {
     "inputs": [
@@ -31,13 +35,20 @@ export const ABI = [
     "type": "function"
   },
   {
-    "inputs": [
+    "inputs": [],
+    "name": "chainlinkContract",
+    "outputs": [
       {
-        "internalType": "uint256",
-        "name": "_index",
-        "type": "uint256"
+        "internalType": "contract VRFv2Consumer",
+        "name": "",
+        "type": "address"
       }
     ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "chooseMainProposal",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -52,6 +63,20 @@ export const ABI = [
       }
     ],
     "name": "closeVoting",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "createRandomNumber",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "createRandomValues",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -169,6 +194,13 @@ export const ABI = [
   },
   {
     "inputs": [],
+    "name": "getRequestId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "getVotingStatus",
     "outputs": [
       {
@@ -233,6 +265,19 @@ export const ABI = [
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "randomNumber",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "address",
@@ -260,7 +305,33 @@ export const ABI = [
   },
   {
     "inputs": [],
+    "name": "requestId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "resetTable",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_addressA",
+        "type": "address"
+      }
+    ],
+    "name": "setContract",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -317,5 +388,9 @@ export const ABI = [
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
   }
 ]

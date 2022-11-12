@@ -66,10 +66,10 @@ function WABecomeMember() {
         <button className='button-56' onClick={checkStatus}>Check to see if you are a Member</button>
         <p>{membershipStatus}</p>
         <button className='button-56' onClick={becomeMember}>Become a Member</button>
-        <p>To become a member you need to pay at least 1 Matic to the contract</p>
+        <p>To become a member you need to pay at least 1 FTM to the contract</p>
         <input type="number" 
             value = {inputValue}
-            placeholder='enter Matic amount.(Minimum is 1)'
+            placeholder='enter FTM amount.(Minimum is 1)'
             onChange={e => setInputValue(e.target.value) }/>
         <br />
         <br />

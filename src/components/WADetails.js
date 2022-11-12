@@ -3,6 +3,9 @@ import WAMainProposal from './WAMainProposal';
 import WALeaveMembership from './WALeaveMembership';
 import { useNavigate } from 'react-router-dom';
 import WAWithdrawBalance from './WAWithdrawBalance';
+import WARandom1 from './WARandom1';
+import WARandom2 from './WARandom2';
+import WARandom3 from './WARandom3';
 
  
 function WADetails() {
@@ -27,6 +30,12 @@ function WADetails() {
             <WAWithdrawBalance />
             <br />
             <WALeaveMembership />
+            <br />
+            <WARandom1 />
+            <br />
+            <WARandom2 />
+            <br />
+            <WARandom3 />
         </div>
     )
 }

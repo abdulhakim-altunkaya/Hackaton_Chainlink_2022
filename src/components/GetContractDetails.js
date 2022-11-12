@@ -31,7 +31,7 @@ function GetContractDetails() {
   return (
     <div>
       <button className='button-56' onClick={getData}> See Contract Details</button>
-      <p><strong>Stockholm City Contract Address:</strong>  {stockholmAddress}</p>
+      <p><strong>Berlin City Contract Address:</strong>  {stockholmAddress}</p>
       <p><strong>Contract Administrator ("Owner") Address:</strong>  {stockholmOwner}</p>
     </div>
   )

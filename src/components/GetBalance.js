@@ -29,7 +29,7 @@ function GetBalance() {
     } else {
       let data = txResponse.toString();
       let data2 = data.slice(0, -18);
-      setVotingBalance(`${data2} Matic`);
+      setVotingBalance(`${data2} FTM`);
     }
 
   }

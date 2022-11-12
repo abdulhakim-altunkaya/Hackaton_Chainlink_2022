@@ -35,7 +35,6 @@ body {
 }
 
 #heading {
-  background-color: white;
   border-radius: 10px;
   padding: 5px;
   align-self: center;
@@ -58,7 +57,10 @@ For future
   padding-left: 10px;
 }
 
-
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
 
 
 /* INPUT */
