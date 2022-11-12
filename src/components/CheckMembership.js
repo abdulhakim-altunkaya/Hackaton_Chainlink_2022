@@ -27,7 +27,7 @@ function CheckMembership({account}) {
         connectContract();
         const txResponse = await contract.membershipStatus(account);
         if(txResponse === true) {
-            setMembershipStatus("yes you are");
+            setMembershipStatus("yes, you are");
         } else {
             setMembershipStatus("no you are not member yet");
         }
