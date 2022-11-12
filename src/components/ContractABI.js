@@ -70,7 +70,13 @@ export const ABI = [
   {
     "inputs": [],
     "name": "createRandomNumber",
-    "outputs": [],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "nonpayable",
     "type": "function"
   },

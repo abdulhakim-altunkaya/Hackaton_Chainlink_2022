@@ -16,9 +16,7 @@ contract Voting {
 
     //Creating an owner for the Contract
     address internal owner;
-    constructor() {
-        owner = msg.sender;
-    }
+
     modifier onlyOwner(){
         require(msg.sender == owner, "you are not owner");
         _;
@@ -83,7 +81,13 @@ contract Voting {
     VRFv2Consumer public chainlinkContract;
     uint public randomNumber;
     uint public requestId;
-    function setContract(address _addressA) external /*onlyOwner*/ { 
+    /* //THIS FUNCTION WILL BE REPLACED WITH CONSTRUCTOR TO MAKE PROJECT MORE CONCISE
+    function setContract(address _addressA) external onlyOwner { 
+        chainlinkContract = VRFv2Consumer(_addressA);
+    }
+    */
+    constructor(address _addressA) {
+        owner = msg.sender;
         chainlinkContract = VRFv2Consumer(_addressA);
     }
     function createRandomValues() external {

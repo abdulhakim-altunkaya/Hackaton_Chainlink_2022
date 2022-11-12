@@ -4,11 +4,13 @@
 // You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
+import {VRF_ADDRESS} from "../src/components/ContractVRF.js";
+
 const hre = require("hardhat");
 
 async function main() {
   const Voting = await hre.ethers.getContractFactory("Voting");
-  const voting = await Voting.deploy();
+  const voting = await Voting.deploy(VRF_ADDRESS);
   await voting.deployed();
   console.log( `voting deployed to ${voting.address}` );
 }

@@ -20,7 +20,7 @@ function WARandom3() {
     const createNumber = async () => {
         await connectContract();
         await contract.createRandomNumber();
-        setRandomNum(await contract.randomNumber());
+        setRandomNum("Random Number is: ", await contract.randomNumber());
     }
 
     return (
