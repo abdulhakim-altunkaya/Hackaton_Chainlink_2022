@@ -1,7 +1,11 @@
 Chainlink Hackaton Fall 2022 Project
+
 Project Name: Berlin City Voting System
+
 Project Owners: Abdulhakim Altunkaya, Sedat Taskiran
+
 Project Technologies: Solidity, React.js, Javascript, Ethers, Hardhat, Fantom, Chainlink VRF, CSS
+
 
 HOW TO USE WEBSITE:
 1) Make sure you have Metamask installed on your browser
