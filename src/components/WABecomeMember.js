@@ -55,11 +55,6 @@ function WABecomeMember() {
         setMembershipStatus("You are not a member yet");
     }
   }
-  
-
-
-
-
 
   return (
     <div>            

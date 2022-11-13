@@ -8,8 +8,8 @@ function Upperbar() {
 
   return (
     <div id='upperbar'>
-      <div id='heading' onClick={() => sameTab('http://127.0.0.1:3000/')}> 
-          <a href="http://127.0.0.1:3000/" target="_self" rel="noopener noreferrer"> BERLIN CITY VOTING SYSTEM </a> 
+      <div id='heading' onClick={() => sameTab('https://euphonious-klepon-0acd11.netlify.app/')}> 
+          <a href="https://euphonious-klepon-0acd11.netlify.app/" target="_self" rel="noopener noreferrer"> BERLIN CITY VOTING SYSTEM </a> 
       </div>
     </div> 
   )

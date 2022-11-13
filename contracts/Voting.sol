@@ -178,7 +178,7 @@ contract Voting {
         return votingStatus[msg.sender];
     }
 
-    //no need to reset votingStartTime here.
+    //no need to reset votingStartTime here. 
     function closeVoting(uint indexMapping) external /*onlyOwner*/ {
         uint totalVotes = y + n;
         uint percentage1 = y*100;
